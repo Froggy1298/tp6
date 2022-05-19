@@ -1,0 +1,68 @@
+﻿@using TP5WebTransactionnel.Models;
+@model Reservation;
+@{
+    ViewData["Title"] = "Detail";
+}
+<div class="text-center row">
+    <div class="d-none d-lg-block col-lg-4 align-self-center">
+            @*<img class="img-fluid"  src="~/Img/CheckMark.jpg"/>*@
+            <img class="img-fluid"  src="~/Img/MenuChoice/@Model.ChoixMenu.ImagePath" alt="The Image"/>
+    </div>
+    <div class="col-md-12 col-lg-8">
+        <h2>@Resource.ReservComp</h2>
+        <div class="form-horizontal form-group">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-lg-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.Nom):</b></p>
+                </div>
+                <div class="col-md-12 col-lg-auto">
+                    <p>@Html.DisplayFor(model => Model.Nom)</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-horizontal form-group">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-lg-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.Courriel):</b></p>
+                </div>
+                <div class="col-md-12 col-lg-auto">
+                    <p>@Html.DisplayFor(model => Model.Courriel)</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-horizontal form-group">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-lg-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.NbPersonne):</b></p>
+                </div>
+                <div class="col-md-12 col-lg-auto">
+                    <p>@Html.DisplayFor(model => Model.NbPersonne) pers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-horizontal form-group">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-lg-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.DateReservation):</b></p>
+                </div>
+                <div class="col-md-12 col-lg-auto">
+                    <p>@Html.DisplayFor(model => Model.DateReservation)</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-horizontal form-group">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-lg-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.ChoixMenu.Description):</b></p>
+                </div>
+                <div class="col-md-12 col-lg-auto">
+                    <p>@Html.DisplayFor(model => Model.ChoixMenu.Description)</p>
+                </div>
+            </div>
+        </div>
+        <p>@Resource.ThankYou</p>
+        <p>@Resource.VoirBiento</p>
+        <p>@Resource.Equipe</p>
+        <a asp-action="Index" asp-controller="Home">@Resource.ReturnPage</a>
+    </div>
+</div>

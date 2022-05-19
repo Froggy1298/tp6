@@ -1,0 +1,40 @@
+﻿@using TP5WebTransactionnel.Models;
+@model Member
+@{
+    ViewData["Title"] = Resource.SuppMembre;
+}
+
+<div class="d-flex flex-column align-items-center">
+    <h1><i class="fa fa-user"></i>@Resource.SuppMembre</h1>
+        <h2>@Resource.QuestionSuppMember</h2>
+        <form asp-action="Delete" method="post">
+            <hr/>
+            <div>
+                <label asp-for="Name"><b class="text-md-left">@Html.DisplayNameFor(model => Model.Name):</b></label>
+                <label>@Html.DisplayFor(model => Model.Name)</label>
+            </div>
+            <hr />
+            <div>
+                <label asp-for="Email"><b class="text-md-left">@Html.DisplayNameFor(model => Model.Email):</b></label>
+                <label>@Html.DisplayFor(model => Model.Email)</label>
+            </div>
+            <hr />
+            <div>
+                <label asp-for="Username"><b class="text-md-left">@Html.DisplayNameFor(model => Model.Username):</b></label>
+                <label>@Html.DisplayFor(model => Model.Username)</label>
+            </div>
+            <hr />
+            <div>
+                <label asp-for="Role"><b class="text-md-left">@Html.DisplayNameFor(model => Model.Role):</b></label>
+                <label>@Html.DisplayFor(model => Model.Role)</label>
+            </div>
+            <hr />
+            <div class="text-center">
+                <input  class="btn-danger btn" type="submit" value="@Resource.Supp"/>
+            </div>
+            <input type="hidden" asp-for="Id" />
+        </form>
+    <br/>
+    <a asp-action="List" class="text-center">@Resource.RetournMembre</a>
+    <br />
+</div>

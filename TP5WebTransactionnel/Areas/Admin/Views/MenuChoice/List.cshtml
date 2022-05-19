@@ -1,0 +1,39 @@
+﻿@model List<MenuChoice>;
+@{
+    ViewData["Title"] = @Resource.ListChoixMenu;
+}
+<div class="d-flex justify-content-center flex-column align-items-center">
+    <h1 class="p-2"><i class="fa fa-list"></i>@Resource.ListChoixMenu</h1>
+    <table class="table-sm table-bordered table-striped"> 
+        <thead>
+             <tr>
+              <th>@Html.DisplayNameFor(model => model[0].Description)</th>
+              <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(MenuChoice mn in Model)
+            {
+              <tr>
+                  <td class="w-75">@Html.DisplayFor(model => mn.Description)</td>
+                  @*<td>@mn.Description</td>*@
+                  <td class="text-center">
+                    <a asp-route-id="@mn.Id" asp-action="Edit" data-toggle="tooltip" title="@Resource.Modifier"><i class="fa fa-pencil-square-o"></i></a> 
+                    | 
+                    <a asp-route-id="@mn.Id" asp-action="Delete" data-toggle="tooltip" title="@Resource.Supp"><i class="fa fa-trash-o"></i></a>
+                  </td>
+              </tr>  
+            }
+        </tbody>
+    </table>
+    <a asp-action="Create" class="btn-primary btn my-2">@Resource.Ajouter @Resource.UnChoixMenu</a>
+    <br/>
+</div>
+@section Scripts { 
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+     <script type="text/javascript">
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+      </script>
+}

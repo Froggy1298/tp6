@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        
+    
+    <link href="~/Admin/assets/css/admin.css" rel="stylesheet" />
+
+    @await RenderSectionAsync("Links", required: false)
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a class="navbar-brand">@Resource.Admin</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ">
+                            <a class="text-light mx-2" asp-action="List" asp-controller="MenuChoice"><i class="fa fa-list"></i>@Resource.ChoiMenu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-light mx-2" asp-action="List" asp-controller="Reservation"><i class="fa fa-user"></i>@Resource.LesReserv</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-light mx-2" asp-action="List" asp-controller="Member"><i class="fa fa-user"></i>@Resource.LesMembres</a>
+                        </li>
+                        <li class="nav-item">
+                            <partial name="PartialLoginMenu"/>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <main>
+            @RenderBody()
+        </main>
+
+    <footer class="border-top footer text-muted bg-dark">
+        <div class="d-flex justify-content-around bg-secondary">
+            <a class="text-light m-2 h3" asp-action="List" asp-controller="MenuChoice"><i class="fa fa-list"></i>@Resource.ChoiMenu</a>
+
+            <a class="text-light m-2 h3" asp-action="List" asp-controller="Member"><i class="fa fa-user"></i>@Resource.LesReserv</a>
+                
+            <a class="text-light m-2 h3" asp-action="List" asp-controller="Reservation"><i class="fa fa-user"></i>@Resource.LesMembres</a>
+        </div>
+        <div class="text-center text-white h6">ASP.NET MVC - @("@")Jérémie Rigert </div>
+        <div class="languages text-center">
+            <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-lang="fr" asp-route-returnurl="@Context.Request.Path">Français</a> |
+            <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-lang="en" asp-route-returnurl="@Context.Request.Path">English</a>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+ @await RenderSectionAsync("Scripts", required: false)
+</html>
+

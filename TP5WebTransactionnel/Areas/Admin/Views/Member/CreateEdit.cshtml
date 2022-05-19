@@ -1,0 +1,79 @@
+﻿@using TP5WebTransactionnel.Models;
+@model CreateMemberViewModel
+@{
+    string textAction = @Resource.Ajouter;
+    string formAction = "Create";
+    if(Model.Membre.Id != 0)
+    {
+        textAction = @Resource.Modifier;
+        formAction = "Edit";
+    }
+
+    ViewData["Title"] = textAction + Resource.UnMembre;
+
+}
+<div class="d-flex flex-column align-items-center">
+    <h1><i class="fa fa-list"></i> @textAction @Resource.UnMembre</h1>
+    <div class="w-75">
+        <form asp-action="@formAction" method="post">
+            <hr/>
+            <div class="form-group row">
+                <label asp-for="@Model.Membre.Name" class="col-form-label col-md-3"></label>
+                <div class="col-md-9">
+                    <input asp-for="@Model.Membre.Name" class="form-control" />
+                    <span asp-validation-for="@Model.Membre.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group row">
+                <label asp-for="@Model.Membre.Email" class="col-form-label col-md-3"></label>
+                <div class="col-md-9">
+                    <input asp-for="@Model.Membre.Email" class="form-control" />
+                    <span asp-validation-for="@Model.Membre.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group row">
+                <label asp-for="@Model.Membre.Username" class="col-form-label col-md-3"></label>
+                <div class="col-md-9">
+                    <input asp-for="@Model.Membre.Username" class="form-control" />
+                    <span asp-validation-for="@Model.Membre.Username" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group row">
+                <label asp-for="@Model.Membre.Password" class="col-form-label col-md-3"></label>
+                <div class="col-md-9">
+                    <input asp-for="@Model.Membre.Password" class="form-control" />
+                    <span asp-validation-for="@Model.Membre.Password" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+             <div class="form-group row">
+                <label asp-for="@Model.Membre.Role" class="col-form-label col-md-3 col-sm-12"></label>
+                <div class="col-md-9 col-sm-12">
+                    <select asp-for="@Model.Membre.Role" class="form-control">
+                        @foreach (String LR in Model.ListeRole)
+                        {
+                            <option value="@LR">@LR</option>
+                        }
+                    </select>
+                    <span asp-validation-for="@Model.Membre.Role" class="text-danger"></span>
+                </div>
+            </div>
+            <hr />
+            <input type="hidden" asp-for="@Model.Membre.Id" />
+            <div class="text-center">
+                <input class="btn-primary btn" type="submit" value="@textAction" name="@formAction" />
+            </div>
+        </form>
+    </div>
+    <br/>
+    <a asp-action="List">@Resource.RetournMembre</a>
+    <br />
+
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

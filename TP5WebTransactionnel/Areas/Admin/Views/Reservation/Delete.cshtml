@@ -1,0 +1,57 @@
+﻿@model Reservation
+@{
+    ViewData["Title"] = @Resource.SuppReserv;
+}
+
+<div>
+        <h1 class="p-2 text-center"><i class="fa fa-user"></i>@Resource.SuppReserv</h1>
+        <form asp-action="Delete" class="text-center" method="post">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-xl-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.DateReservation):</b></p>
+                </div>
+                <div class="col-md-12 col-xl-auto">
+                    <p>@Html.DisplayFor(model => Model.DateReservation)</p>
+                </div>
+            </div>
+             <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-xl-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.Nom):</b></p>
+                </div>
+                <div class="col-md-12 col-xl-auto">
+                    <p>@Html.DisplayFor(model => Model.Nom)</p>
+                </div>
+            </div>
+             <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-xl-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.Courriel):</b></p>
+                </div>
+                <div class="col-md-12 col-xl-auto">
+                    <p>@Html.DisplayFor(model => Model.Courriel)</p>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-xl-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.NbPersonne):</b></p>
+                </div>
+                <div class="col-md-12 col-xl-auto">
+                    <p>@Html.DisplayFor(model => Model.NbPersonne) pers.</p>
+                </div>
+            </div>
+             <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-xl-auto">
+                    <p><b>@Html.DisplayNameFor(model => Model.ChoixMenu.Description):</b></p>
+                </div>
+                <div class="col-md-12 col-xl-auto">
+                    <p>@Html.DisplayFor(model => Model.ChoixMenu.Description)</p>
+                </div>
+            </div>
+            <div class="m-2">
+                <input type="submit" class="btn-danger btn" name="@Resource.Supp" value="Supprimer"/>
+            </div>
+            <div class="m-2">
+                <a  asp-action="List"  asp-controller="Reservation">@Resource.ReturnReserv</a>
+            </div>
+            
+        </form>
+</div>

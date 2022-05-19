@@ -1,0 +1,47 @@
+﻿@model List<Reservation>
+@{
+    ViewData["Title"] = @Resource.ListReserv;
+}
+
+<div class="d-flex justify-content-center flex-column align-items-center">
+    <h1 class="p-2"><i class="fa fa-user"></i>@Resource.ListReserv</h1>
+    <table  class="table-sm table-bordered table-striped"> 
+      <thead>
+        <tr>
+          <th>@Html.DisplayNameFor(model => model[0].DateReservation)</th>
+          <th>@Html.DisplayNameFor(model => model[0].Nom)</th>
+          <th>@Html.DisplayNameFor(model => model[0].Courriel)</th>
+          <th>@Html.DisplayNameFor(model => model[0].ChoixMenu.Description)</th>
+          <th>@Html.DisplayNameFor(model => model[0].NbPersonne)</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+          @foreach(Reservation reserv in Model)
+           {
+           <tr>
+                <td>@Html.DisplayFor(model => reserv.DateReservation)</td>
+                <td>@Html.DisplayFor(model => reserv.Nom)</td>
+                <td>@Html.DisplayFor(model => reserv.Courriel)</td>
+                <td>@Html.DisplayFor(model => reserv.ChoixMenu.Description)</td>
+                <td class="text-center">@Html.DisplayFor(model => reserv.NbPersonne) pers.</td>
+                <td class="text-center">
+                    <a asp-action="Delete" asp-route-id="@reserv.Id" data-toggle="tooltip" title="@Resource.Supp" >
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+                </td>
+           </tr>
+           }
+      <tbody/>
+    </table>
+    <br/>
+</div>
+@section Scripts { 
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+     <script type="text/javascript">
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+      </script>
+
+}

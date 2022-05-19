@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccessDeniedChangeUserMsg" xml:space="preserve">
+    <value>Accès interdit, veuillez vous connecter avec un autre utilisateur.</value>
+  </data>
+  <data name="AccessDeniedMsg" xml:space="preserve">
+    <value>Accès interdit, veuillez vous connecter.</value>
+  </data>
+  <data name="AddMembre" xml:space="preserve">
+    <value>Ajouter un membre</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>ADMINISTRATION</value>
+  </data>
+  <data name="Ajouter" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="BackToHomepage" xml:space="preserve">
+    <value>Retour à la page d'accueil</value>
+  </data>
+  <data name="BackToLoginPage" xml:space="preserve">
+    <value>Retour à la page de connexion</value>
+  </data>
+  <data name="ChoiMenu" xml:space="preserve">
+    <value>LES CHOIX DE MENU</value>
+  </data>
+  <data name="ChoixMenu" xml:space="preserve">
+    <value>Choix du menu</value>
+  </data>
+  <data name="ConfirmReserv" xml:space="preserve">
+    <value>Confirmer la réservation</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Créer un nouveau compte</value>
+  </data>
+  <data name="DateReserv" xml:space="preserve">
+    <value>Date de réservation</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Courriel</value>
+  </data>
+  <data name="Equipe" xml:space="preserve">
+    <value>L'équipe</value>
+  </data>
+  <data name="Identification" xml:space="preserve">
+    <value>Identification</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="InvalidEmailFormat" xml:space="preserve">
+    <value>Format de courriel invalide.</value>
+  </data>
+  <data name="InvalidUsernamePassword" xml:space="preserve">
+    <value>Nom d'utilisateur et/ou mot de passe incorrect(s).</value>
+  </data>
+  <data name="LesMembres" xml:space="preserve">
+    <value>LES MEMBRES</value>
+  </data>
+  <data name="LesReserv" xml:space="preserve">
+    <value>LES RÉSERVATIONS</value>
+  </data>
+  <data name="ListChoixMembre" xml:space="preserve">
+    <value>Listes des membres</value>
+  </data>
+  <data name="ListChoixMenu" xml:space="preserve">
+    <value>Liste des choix de menu</value>
+  </data>
+  <data name="ListReserv" xml:space="preserve">
+    <value>Listes des réservatisons</value>
+  </data>
+  <data name="ModelBetween" xml:space="preserve">
+    <value>La valeur doit être entre {1} et {2}.</value>
+  </data>
+  <data name="ModelLengthBetween" xml:space="preserve">
+    <value>La longueur doit être entre {2} et {1}.</value>
+  </data>
+  <data name="ModelLengthLessThan" xml:space="preserve">
+    <value>La longueur doit être plus petite que {1}.</value>
+  </data>
+  <data name="ModelNumber" xml:space="preserve">
+    <value>La valeur doit être un nombre.</value>
+  </data>
+  <data name="ModelRequired" xml:space="preserve">
+    <value>{0} obligatoire.</value>
+  </data>
+  <data name="Modifier" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="NameAlreadyExists" xml:space="preserve">
+    <value>Le nom existe déjà.</value>
+  </data>
+  <data name="NbClient" xml:space="preserve">
+    <value>Nombre de client</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Mot de passe</value>
+  </data>
+  <data name="PrendreReserv" xml:space="preserve">
+    <value>Prendre Réservation</value>
+  </data>
+  <data name="QuestionSuppMember" xml:space="preserve">
+    <value>Êtes-vous certain de vouloir supprimer ce membre?</value>
+  </data>
+  <data name="QuestionSuppMenu" xml:space="preserve">
+    <value>Êtes-vous certain de vouloir supprimer ce menu?</value>
+  </data>
+  <data name="ReservComp" xml:space="preserve">
+    <value>Réservation complété avec succès</value>
+  </data>
+  <data name="ReservLigne" xml:space="preserve">
+    <value>RÉSERVATION EN LIGNE</value>
+  </data>
+  <data name="RetournMembre" xml:space="preserve">
+    <value>Retour à la liste de membre</value>
+  </data>
+  <data name="RetournMenu" xml:space="preserve">
+    <value>Retour à la liste des choix de menu</value>
+  </data>
+  <data name="ReturnPage" xml:space="preserve">
+    <value>Retourner à la page d'accueil</value>
+  </data>
+  <data name="ReturnReserv" xml:space="preserve">
+    <value>Retour à la liste des réservation</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
+  <data name="SignOut" xml:space="preserve">
+    <value>Se déconnecter</value>
+  </data>
+  <data name="Supp" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="SuppMembre" xml:space="preserve">
+    <value>Supprimer un membre</value>
+  </data>
+  <data name="SuppMenu" xml:space="preserve">
+    <value>Supprimer un choix de menu</value>
+  </data>
+  <data name="SuppReserv" xml:space="preserve">
+    <value>Supprimer une réservation</value>
+  </data>
+  <data name="ThankYou" xml:space="preserve">
+    <value>Merci d'avoir utiliser notre modure de réservation en ligne.</value>
+  </data>
+  <data name="UnChoixMenu" xml:space="preserve">
+    <value>un choix de menu</value>
+  </data>
+  <data name="UnMembre" xml:space="preserve">
+    <value>un membre</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="VoirBiento" xml:space="preserve">
+    <value>Au plaisir de vous voir bientôt</value>
+  </data>
+  <data name="VotreReserv" xml:space="preserve">
+    <value>Votre réservation </value>
+  </data>
+</root>

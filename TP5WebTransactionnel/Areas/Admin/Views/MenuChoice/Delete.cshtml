@@ -1,0 +1,23 @@
+﻿@model MenuChoice
+@{
+    ViewData["Title"] = @Resource.SuppMenu;
+}
+
+<div class="d-flex flex-column align-items-center">
+    <h1><i class="fa fa-list"></i> @Resource.SuppMenu</h1>
+        <h2>@Resource.QuestionSuppMenu</h2>
+        <form asp-action="Delete" method="post">
+            <hr/>
+            <div>
+                <label asp-for="Description"><b class="text-md-left">@Html.DisplayNameFor(model => Model.Description):</b></label>
+                <label>@Html.DisplayFor(model => Model.Description)</label>
+            </div>
+            <hr />
+            <div class="text-center">
+                <input  class="btn-danger btn" type="submit" value="Supprimer"/>
+            </div>
+        </form>
+    <br/>
+    <a asp-action="List" class="text-center">@Resource.RetournMenu</a>
+    <br />
+</div>

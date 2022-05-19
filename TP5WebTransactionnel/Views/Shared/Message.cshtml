@@ -1,0 +1,13 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Message";
+}
+
+<div class="text-center">
+    <div>
+        <h2>Message</h2>
+    </div>
+
+    <p>@Model</p>
+    <a asp-action="Index" asp-controller="Home">Retourner à la page d'accueil</a>
+</div>
